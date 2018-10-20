@@ -38,3 +38,8 @@ worker37: node bot37.js
 worker38: node bot38.js
 worker39: node bot39.js
 worker40: node bot40.js
+worker41: node bot41.js
+worker42: node bot42.js
+worker43: node bot43.js
+worker44: node bot44.js
+worker45: node bot45.js
