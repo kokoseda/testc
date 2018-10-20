@@ -33,7 +33,7 @@ var channel = "503222054946996224";//ايدي الروم
 
 
 client.on('message', message => {
-if(message.content.startsWith('1s')) {
+if(message.content.startsWith('2s')) {
 if(message.author.id !== "314135031029170197") return;
 var args = message.content.split(' ').slice(1).join(' ');
 message.channel.send(args);
@@ -45,4 +45,4 @@ message.channel.send(args);
 
 
 
-client.login(process.env.BOT_TOKEN); 
+client.login(process.env.BOT_TOKEN2); 
