@@ -1,20 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @kokoseda Sign out
-0
-0 0 kokoseda/testc
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-testc/bot16.js
-eea3732  just now
-@kokoseda kokoseda Create bot16.js
-    
-49 lines (34 sloc)  1.78 KB
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
