@@ -55,7 +55,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 	if(message.content === '3'){
-        message.channel.send('#rep <@502474928466165760>')
+        message.channel.send('#rep <@420637382644072451>')
     }
 });
 
