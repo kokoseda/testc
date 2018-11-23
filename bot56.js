@@ -40,7 +40,46 @@ message.channel.send(args);
 }
 });
  
+client.on('message', message => {
+if(message.content.startsWith('5s')) {
+if(message.author.id !== "314135031029170197") return;
+var args = message.content.split(' ').slice(1).join(' ');
+message.channel.send(args);
+}
+});
+ 
+client.on('message', message => {
+if(message.content.startsWith('56s')) {
+if(message.author.id !== "420637382644072451") return;
+var args = message.content.split(' ').slice(1).join(' ');
+message.channel.send(args);
+}
+});
+ 
 
+client.on('message', message => {
+	if(message.content === '1'){
+        message.channel.send('#daily')
+    }
+});
+
+client.on('message', message => {
+	if(message.content === '2'){
+        message.channel.send('#credit')
+    }
+});
+
+client.on('message', message => {
+	if(message.content === '3'){
+        message.channel.send('#rep <@420637382644072451>')
+    }
+});
+
+client.on('message', message => {
+     if(message.content === '4'){
+        message.member.voiceChannel.join();
+    }
+});
 
 
 
