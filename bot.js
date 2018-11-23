@@ -41,14 +41,29 @@ message.channel.send(args);
 });
  
 
-client.on('ready', async() => {
-var server = "495608433064673281"; // ايدي السررفر
-var channel = "503222054946996224";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('#credit')
-    },8.64e+7);
-})
+client.on('message', message => {
+	if(message.content === '1'){
+        message.channel.send('#daily')
+    }
+});
 
+client.on('message', message => {
+	if(message.content === '2'){
+        message.channel.send('#credit')
+    }
+});
+
+client.on('message', message => {
+	if(message.content === '3'){
+        message.channel.send('#rep <@502474928466165760>')
+    }
+});
+
+client.on('message', message => {
+     if(message.content === '4'){
+        message.member.voiceChannel.join();
+    }
+});
 
 
 client.login(process.env.BOT_TOKEN); 
