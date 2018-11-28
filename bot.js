@@ -1,5 +1,10 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
+
+
+const prefix = "1"
+const devs = ['420637382644072451']
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -33,7 +38,7 @@ var channel = "503222054946996224";//ايدي الروم
 
 
 client.on('message', message => {
-if(message.content.startsWith('1s')) {
+if(message.content.startsWith(prefix + 's')) {
 if(message.author.id !== "420637382644072451") return;
 var args = message.content.split(' ').slice(1).join(' ');
 message.channel.send(args);
@@ -64,6 +69,18 @@ client.on('message', message => {
         message.member.voiceChannel.join();
     }
 });
+
+
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+if (message.content.startsWith('setavatar')) {
+  client.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);
+}
+});
+
 
 
 client.login(process.env.BOT_TOKEN); 
